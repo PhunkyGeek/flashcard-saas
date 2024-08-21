@@ -139,7 +139,7 @@ const FlashcardForm = () => {
           <button
             type="button"
             onClick={handleGenerateFlashcard}
-            className="ml-2 bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
+            className="ml-2 bg-black text-white p-2 rounded-md hover:bg-gray-500 transition-colors duration-300"
           >
             {loading ? "Generating..." : "Generate Flashcards"}
           </button>

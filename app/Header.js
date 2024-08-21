@@ -38,8 +38,10 @@ export default function Header() {
             isMenuOpen ? "block" : ""
           }`}
         >
-          <ul className="flex flex-col lg:flex-row lg:space-x-6 space-y-4 lg:space-y-0">
-            <li>
+          <ul className="flex py-1 mt-1 flex-col lg:flex-row lg:space-x-6 space-y-4 lg:space-y-0">
+            <li style={{
+                marginTop: "8px"
+              }}>
               <a
                 href="/"
                 className="text-white hover:text-gray-400 transition-colors duration-300 transform hover:scale-105"
@@ -49,7 +51,9 @@ export default function Header() {
             </li>
 
             {!isSignedIn ? (
-              <li>
+              <li style={{
+                marginTop: "8px"
+              }}>
                 <a
                   href="/sign-in"
                   className="text-white hover:text-gray-400 transition-colors duration-300 transform hover:scale-105"
@@ -59,7 +63,9 @@ export default function Header() {
               </li>
             ) : (
               <>
-                <li>
+                <li style={{
+                marginTop: "8px"
+              }}>
                   <a
                     href="/dashboard"
                     className="text-white hover:text-gray-400 transition-colors duration-300 transform hover:scale-105"
