@@ -76,7 +76,7 @@ const PricingSection = () => {
             </Typography>
             <ul className="list-none p-0 text-center mb-4">
               <li className="mb-2">Flashcard Samples</li>
-              <li className="mb-2">Limited AI Integration</li>
+              <li className="mb-2">Limited Generative AI</li>
             </ul>
             <Button
               variant="contained"
@@ -113,8 +113,8 @@ const PricingSection = () => {
             </Typography>
             <ul className="list-none p-0 text-center mb-4">
               <li className="mb-2">Flashcard Samples</li>
-              <li className="mb-2">Unlimited AI Integration</li>
               <li className="mb-2">Ticket Support</li>
+              <li className="mb-2">Unlimited AI Integration</li>
             </ul>
             <Button
               variant="contained"
