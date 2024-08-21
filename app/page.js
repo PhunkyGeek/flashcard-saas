@@ -78,6 +78,9 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="bg-white text-black shadow-lg"
+              style={{
+                borderRadius: "10px"
+              }}
             >
               <CardContent>
                 <Typography variant="h5" component="div" gutterBottom>
@@ -96,6 +99,9 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="bg-white text-black shadow-lg"
+              style={{
+                borderRadius: "10px"
+              }}
             >
               <CardContent>
                 <Typography variant="h5" component="div" gutterBottom>
@@ -114,6 +120,9 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="bg-white text-black shadow-lg"
+              style={{
+                borderRadius: "10px"
+              }}
             >
               <CardContent>
                 <Typography variant="h5" component="div" gutterBottom>

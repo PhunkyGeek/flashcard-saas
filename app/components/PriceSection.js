@@ -51,8 +51,8 @@ const PricingSection = () => {
 
   return (
     <section className="w-full max-w-4xl mx-auto px-4 py-8">
-      <Typography variant="h4" className="mb-5 text-center">
-        Choose Your Plan
+      <Typography variant="h4" className="mb-5 font-medium text-center">
+        Pricing plans
       </Typography>
       <br />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -63,6 +63,9 @@ const PricingSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="bg-white text-black shadow-lg text-center"
+          style={{
+            borderRadius: "10px"
+          }}
         >
           <CardContent>
             <Typography variant="h5" component="div" gutterBottom>
@@ -78,8 +81,9 @@ const PricingSection = () => {
             <Button
               variant="contained"
               style={{
-                backgroundColor: 'gray',
-                color: 'white', // Ensures the text is visible on the black background
+                borderRadius: "25px",
+                backgroundColor: "gray",
+                color: "white", // Ensures the text is visible on the black background
               }}
               className="mt-4"
               onClick={handleBasicPlanClick}
@@ -96,6 +100,9 @@ const PricingSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="bg-white text-black text-center shadow-lg"
+          style={{
+            borderRadius: "10px"
+          }}
         >
           <CardContent>
             <Typography variant="h5" component="div" gutterBottom>
@@ -112,8 +119,9 @@ const PricingSection = () => {
             <Button
               variant="contained"
               style={{
-                backgroundColor: 'black',
-                color: 'white', // Ensures the text is visible on the black background
+                borderRadius: "25px",
+                backgroundColor: "black",
+                color: "white", // Ensures the text is visible on the black background
               }}
               className="mt-4"
               onClick={handleProSubmit}

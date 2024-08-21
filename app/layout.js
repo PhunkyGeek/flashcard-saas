@@ -10,8 +10,8 @@ import PlausibleProvider from "next-plausible";
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata = {
-  title: "SmartFlash Vault",
-  description: "AI generated Flashcard and Stripe integration project",
+  title: "SaaS Flash",
+  description: "AI generated Flashcard with Stripe integration",
 };
 
 export default function RootLayout({ children }) {
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
               {children}
             </main>
             <footer className="bg-black text-white py-4 text-center shadow-md">
-              <p>&copy; 2024 SaaSFlash. All rights reserved.</p>
+              <p>&copy; 2024 SaaS Flash. All rights reserved.</p>
             </footer>
           </body>
         </html>
