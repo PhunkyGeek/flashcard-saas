@@ -5,7 +5,7 @@ import { Card, CardContent, Typography, Button } from "@mui/material";
 import { useUser } from "@clerk/nextjs";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import getStripe from "@/utils/get-stripe";
+import getStripe from "@/utils/get-stripe"; // Ensure this points to the correct utils path
 
 const PricingSection = () => {
   const { isSignedIn } = useUser();
@@ -25,27 +25,36 @@ const PricingSection = () => {
       return;
     }
 
-    const checkoutSession = await fetch("/api/checkout_session", {
-      method: "POST",
-      headers: {
-        origin: "http://localhost:3000",
-      },
-    });
+    try {
+      const response = await fetch('/api/checkout_session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+           origin: 'http://localhost:3000',
+        },
+      });
 
-    const checkoutSessionJson = await checkoutSession.json();
+      if (!response.ok) {
+        console.error(`HTTP error! status: ${response.status}`);
+        const errorText = await response.text();
+        throw new Error(errorText);
+      }
 
-    if (checkoutSession.statusCode === 500) {
-      console.error(checkoutSession.message);
-      return;
-    }
+      const checkoutSessionJson = await response.json();
 
-    const stripe = await getStripe();
-    const { error } = await stripe.redirectToCheckout({
-      sessionId: checkoutSessionJson.id,
-    });
+      if (checkoutSessionJson.statusCode === 500) {
+        console.error(checkoutSessionJson.message);
+        return;
+      }
 
-    if (error) {
-      console.warn(error.message);
+      const stripe = await getStripe();
+      const { error } = await stripe.redirectToCheckout({ sessionId: checkoutSessionJson.id });
+
+      if (error) {
+        console.error('Stripe checkout error:', error.message);
+      }
+    } catch (error) {
+      console.error('Error creating checkout session:', error.message);
     }
   };
 
@@ -76,7 +85,7 @@ const PricingSection = () => {
             </Typography>
             <ul className="list-none p-0 text-center mb-4">
               <li className="mb-2">Flashcard Samples</li>
-              <li className="mb-2">Limited Generative AI</li>
+              <li className="mb-2">Limited AI Generation</li>
             </ul>
             <Button
               variant="contained"
@@ -114,7 +123,7 @@ const PricingSection = () => {
             <ul className="list-none p-0 text-center mb-4">
               <li className="mb-2">Flashcard Samples</li>
               <li className="mb-2">Ticket Support</li>
-              <li className="mb-2">Unlimited AI Integration</li>
+              <li className="mb-2">Unlimited AI Generation</li>
             </ul>
             <Button
               variant="contained"

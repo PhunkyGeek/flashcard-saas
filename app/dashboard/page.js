@@ -8,7 +8,7 @@ const Dashboard = () => {
         <div
           className={`min-h-screen p-12 flex flex-col bg-gradient-to-r from-black to-gray-500 text-white`}
         >
-          <h1 className="text-2xl font-bold text-center mb-6">My Flashcards</h1>
+          <h1 className="text-2xl font-bold text-center mb-6">SaaS Flashcards</h1>
           <FlashcardForm />
         </div>
       </div>

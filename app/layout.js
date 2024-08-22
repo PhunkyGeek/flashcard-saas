@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
               {children}
             </main>
             <footer className="bg-black text-white py-4 text-center shadow-md">
-              <p>&copy; 2024 SaaS Flash. All rights reserved.</p>
+              <p>&copy; 2024 SaaS Flash. All Rights Reserved.</p>
             </footer>
           </body>
         </html>

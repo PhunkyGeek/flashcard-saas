@@ -62,9 +62,9 @@ const FlashcardForm = () => {
     }
   };
 
-  const handleAddFlashcards = async () => {
+  const handleSaveFlashcards = async () => {
     if (!user) {
-      alert("You need to sign in to add flashcards.");
+      alert("You need to sign in to save flashcards.");
       return;
     }
 
@@ -125,7 +125,7 @@ const FlashcardForm = () => {
     <div className="mb-6">
       <div className="mb-4">
         <label htmlFor="topic" className="block text-lg font-bold text-white">
-          Topic
+          Generative Prompt
         </label>
         <div className="flex">
           <input
@@ -139,7 +139,7 @@ const FlashcardForm = () => {
           <button
             type="button"
             onClick={handleGenerateFlashcard}
-            className="ml-2 bg-black text-white p-2 rounded-md hover:bg-gray-500 transition-colors duration-300"
+            className="ml-2 mt-1 bg-black text-white p-2 rounded-md hover:bg-white hover:text-black hover:font-semibold transition-colors duration-300"
           >
             {loading ? "Generating..." : "Generate Flashcards"}
           </button>
@@ -168,10 +168,10 @@ const FlashcardForm = () => {
           <div className="mt-4">
             <button
               type="button"
-              onClick={handleAddFlashcards}
-              className="bg-green-600 text-white p-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-300"
+              onClick={handleSaveFlashcards}
+              className="bg-gray-700 text-white p-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-300"
             >
-              Add All
+              Save All
             </button>
             <button
               type="button"
