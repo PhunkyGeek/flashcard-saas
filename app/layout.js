@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           <head>
             <title>{metadata.title}</title>
             <meta name="description" content={metadata.description} />
-            <PlausibleProvider domain="https://ai-flash-cards.vercel.app/" />
+            <PlausibleProvider domain="https://flashcard-saas-a4jifr5w0-ronald-abels-projects.vercel.app" />
           </head>
           <body
             className={`${inter.className} bg-gray-200 text-gray-900 flex flex-col min-h-screen`}
