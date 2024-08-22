@@ -45,7 +45,7 @@ const ResultPage = () => {
 
   if (loading) {
     return (
-      <Container maxWidth="100vw" sx={{ textAlign: "center", mt: 4 }}>
+      <Container maxWidth="100vw" sx={{ textAlign: "center", mt: 10 }}>
         <CircularProgress />
         <Typography variant="h6">Loading...</Typography>
       </Container>
@@ -54,7 +54,7 @@ const ResultPage = () => {
 
   if (error) {
     return (
-      <Container maxWidth="100vw" sx={{ textAlign: "center", mt: 4 }}>
+      <Container maxWidth="100vw" sx={{ textAlign: "center", mt: 10 }}>
         <Typography variant="h6">An error occurred</Typography>
         <Typography variant="h6">{error}</Typography>
       </Container>
@@ -66,7 +66,7 @@ const ResultPage = () => {
       {session.payment_status === "paid" ? (
         <>
           <Typography variant="h4">Thank you for your purchase.</Typography>
-          <Box sx={{ mt: 2 }}>
+          <Box sx={{ mt: 10 }}>
             <Typography variant="h6">Session ID: {session_id}</Typography>
             <Typography variant="body1">
               We have received your payment. You will receive an email with
@@ -77,7 +77,7 @@ const ResultPage = () => {
       ) : (
         <>
           <Typography variant="h4">Payment Failed.</Typography>
-          <Box sx={{ mt: 2 }}>
+          <Box sx={{ mt: 10 }}>
             <Typography variant="body1">
               Your payment was not successful. Please try again.
             </Typography>
